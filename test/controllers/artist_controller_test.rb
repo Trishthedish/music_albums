@@ -17,22 +17,22 @@ class ArtistControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
-    get :edit
+    get :edit, {id: 1 }
     assert_response :success
   end
 
-  test "should get create" do
-    get :create
+  test "should be able to create an artist" do
+    post :create
     assert_response :success
   end
 
-  test "should get update" do
-    get :update
+  test "should be able to update an artist" do
+    patch :update, {id: 1}
     assert_response :success
   end
 
-  test "should get delete" do
-    get :delete
+  test "should be able to delete" do
+    delete :destroy, {id: 1 }
     assert_response :success
   end
 

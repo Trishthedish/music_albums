@@ -2,6 +2,20 @@ Rails.application.routes.draw do
   Rails.application.routes.draw do
     resources :artist
   end
+
+
+#   Prefix Verb   URI Pattern                Controller#Action
+# artist_index GET    /artist(.:format)          artist#index
+#        POST   /artist(.:format)          artist#create
+# new_artist GET    /artist/new(.:format)      artist#new
+# edit_artist GET    /artist/:id/edit(.:format) artist#edit
+# artist GET    /artist/:id(.:format)      artist#show
+#        PATCH  /artist/:id(.:format)      artist#update
+#        PUT    /artist/:id(.:format)      artist#update
+#        DELETE /artist/:id(.:format)      artist#destroy
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
