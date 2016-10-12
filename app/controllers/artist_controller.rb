@@ -25,8 +25,10 @@ class ArtistController < ApplicationController
   end
 
   def destroy
-    @artist = Artist.destroy(params[:id].to_i)
-    redirect_to artist_show path
+    @artist = Artist.find(params[:id].to_i)
+    @artist.destroy
+    # puts "Artist is #{@artist}"
+    redirect_to :action => "index"
   end
 
 end

@@ -41,16 +41,16 @@ class ArtistControllerTest < ActionController::TestCase
   end
 
   test "should be able to delete" do
-    delete :destroy, {id: 1 }
-    assert_response :success
+    delete :destroy, {id: artists(:redhotchillipeppers).id }
+    assert_response :redirect
   end
 
 # this is one we had
 
-  test "Should be able to delete an artist" do
+  test "Should be able to delete 'red hot chili peppers'" do
     assert_difference("Artist.count", -1) do
-    post_params = {id: artists(:redhotchillipeppers)}}
-    delete :destroy, post_params
+      delete :destroy, {id: artists(:redhotchillipeppers).id}
+      assert_response :redirect
     end
   end
 
